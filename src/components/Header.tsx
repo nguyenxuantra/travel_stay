@@ -65,38 +65,199 @@ const Header = () => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        TravelStay
-      </Typography>
-      <List>
+    <Box onClick={handleDrawerToggle} sx={{ 
+      textAlign: "center",
+      height: "100%",
+      background: (theme) => `linear-gradient(180deg, ${theme.palette.primary.dark}, ${theme.palette.primary.main})`,
+      color: "white"
+    }}>
+      <Box sx={{ 
+        py: 3, 
+        borderBottom: "1px solid rgba(255,255,255,0.12)",
+        background: "rgba(255,255,255,0.05)"
+      }}>
+        <HotelIcon sx={{ fontSize: 40, mb: 1, opacity: 0.9 }} />
+        <Typography variant="h6" sx={{ fontWeight: 800, letterSpacing: 0.5 }}>
+          TravelStay
+        </Typography>
+      </Box>
+      
+      <List sx={{ px: 2, pt: 2 }}>
         {menuItems.map((item) => (
-          <ListItem key={item.text} component={Link} to={item.path}>
+          <ListItem 
+            key={item.text} 
+            component={Link} 
+            to={item.path}
+            sx={{
+              borderRadius: 2,
+              mb: 1,
+              background: location.pathname === item.path ? "rgba(255,255,255,0.15)" : "transparent",
+              border: location.pathname === item.path ? "1px solid rgba(255,255,255,0.3)" : "1px solid transparent",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                background: "rgba(255,255,255,0.1)",
+                transform: "translateX(8px)",
+                borderColor: "rgba(255,255,255,0.5)"
+              }
+            }}
+          >
             <ListItemText 
               primary={item.text} 
               sx={{ 
-                color: location.pathname === item.path ? theme.palette.primary.main : "inherit",
-                textAlign: "center"
+                color: "white",
+                textAlign: "center",
+                fontWeight: location.pathname === item.path ? 700 : 500,
+                "& .MuiTypography-root": {
+                  fontSize: "1.1rem"
+                }
               }}
             />
           </ListItem>
         ))}
+        
+        {/* Admin link */}
+        <ListItem 
+          component={Link} 
+          to="/admin"
+          sx={{
+            borderRadius: 2,
+            mb: 1,
+            background: location.pathname.startsWith("/admin") ? "rgba(255,255,255,0.15)" : "transparent",
+            border: location.pathname.startsWith("/admin") ? "1px solid rgba(255,255,255,0.3)" : "1px solid transparent",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              background: "rgba(255,255,255,0.1)",
+              transform: "translateX(8px)",
+              borderColor: "rgba(255,255,255,0.5)"
+            }
+          }}
+        >
+          <ListItemText 
+            primary="Admin" 
+            sx={{ 
+              textAlign: "center",
+              color: "white",
+              fontWeight: location.pathname.startsWith("/admin") ? 700 : 500,
+              "& .MuiTypography-root": {
+                fontSize: "1.1rem"
+              }
+            }}
+          />
+        </ListItem>
+        
         {isLoggedIn ? (
           <>
-            <ListItem component={Link} to="/profile">
-              <ListItemText primary="Tài khoản" sx={{ textAlign: "center" }} />
+            <ListItem 
+              component={Link} 
+              to="/profile"
+              sx={{
+                borderRadius: 2,
+                mb: 1,
+                background: "transparent",
+                border: "1px solid rgba(255,255,255,0.2)",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  background: "rgba(255,255,255,0.1)",
+                  transform: "translateX(8px)",
+                  borderColor: "rgba(255,255,255,0.5)"
+                }
+              }}
+            >
+              <ListItemText 
+                primary="Tài khoản" 
+                sx={{ 
+                  textAlign: "center",
+                  color: "white",
+                  "& .MuiTypography-root": {
+                    fontSize: "1.1rem"
+                  }
+                }} 
+              />
             </ListItem>
-            <ListItem onClick={handleLogout}>
-              <ListItemText primary="Đăng xuất" sx={{ textAlign: "center" }} />
+            <ListItem 
+              onClick={handleLogout}
+              sx={{
+                borderRadius: 2,
+                mb: 1,
+                background: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(255,255,255,0.2)",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  background: "rgba(255,255,255,0.15)",
+                  transform: "translateX(8px)",
+                  borderColor: "rgba(255,255,255,0.5)"
+                }
+              }}
+            >
+              <ListItemText 
+                primary="Đăng xuất" 
+                sx={{ 
+                  textAlign: "center",
+                  color: "white",
+                  "& .MuiTypography-root": {
+                    fontSize: "1.1rem"
+                  }
+                }} 
+              />
             </ListItem>
           </>
         ) : (
           <>
-            <ListItem component={Link} to="/login">
-              <ListItemText primary="Đăng nhập" sx={{ textAlign: "center" }} />
+            <ListItem 
+              component={Link} 
+              to="/login"
+              sx={{
+                borderRadius: 2,
+                mb: 1,
+                background: "rgba(255,255,255,0.1)",
+                border: "1px solid rgba(255,255,255,0.3)",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  background: "rgba(255,255,255,0.2)",
+                  transform: "translateX(8px)",
+                  borderColor: "rgba(255,255,255,0.6)"
+                }
+              }}
+            >
+              <ListItemText 
+                primary="Đăng nhập" 
+                sx={{ 
+                  textAlign: "center",
+                  color: "white",
+                  fontWeight: 600,
+                  "& .MuiTypography-root": {
+                    fontSize: "1.1rem"
+                  }
+                }} 
+              />
             </ListItem>
-            <ListItem component={Link} to="/register">
-              <ListItemText primary="Đăng ký" sx={{ textAlign: "center" }} />
+            <ListItem 
+              component={Link} 
+              to="/register"
+              sx={{
+                borderRadius: 2,
+                mb: 1,
+                background: "rgba(255,255,255,0.2)",
+                border: "1px solid rgba(255,255,255,0.4)",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  background: "rgba(255,255,255,0.3)",
+                  transform: "translateX(8px)",
+                  borderColor: "rgba(255,255,255,0.7)"
+                }
+              }}
+            >
+              <ListItemText 
+                primary="Đăng ký" 
+                sx={{ 
+                  textAlign: "center",
+                  color: "white",
+                  fontWeight: 700,
+                  "& .MuiTypography-root": {
+                    fontSize: "1.1rem"
+                  }
+                }} 
+              />
             </ListItem>
           </>
         )}
@@ -146,6 +307,7 @@ const Header = () => {
                   {item.text}
                 </Button>
               ))}
+              
               {isLoggedIn ? (
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1.25, ml: 1 }}>
                   <Typography variant="body2" sx={{ color: "white", opacity: 0.9 }}>
@@ -206,7 +368,16 @@ const Header = () => {
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{ keepMounted: true }}
-        sx={{ display: { xs: "block", md: "none" }, "& .MuiDrawer-paper": { boxSizing: "border-box", width: 260 } }}
+        sx={{ 
+          display: { xs: "block", md: "none" }, 
+          "& .MuiDrawer-paper": { 
+            boxSizing: "border-box", 
+            width: 280,
+            background: (theme) => `linear-gradient(180deg, ${theme.palette.primary.dark}, ${theme.palette.primary.main})`,
+            borderRight: "1px solid rgba(255,255,255,0.12)",
+            boxShadow: "4px 0 20px rgba(0,0,0,0.15)"
+          } 
+        }}
       >
         {drawer}
       </Drawer>

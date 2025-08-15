@@ -165,7 +165,7 @@ const Home = () => {
 
                 <Grid container spacing={4}>
                     {featuredHotels.map((hotel) => (
-                        <Grid size={{ xs: 12, md: 3 }} key={hotel.id}>
+                        <Grid size={{ xs: 12,sm:6, md: 3 }} key={hotel.id}>
                             <Card elevation={4} sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
                                 <Box sx={{ position: "relative" }}>
                                     <CardMedia component="img" height="200" image={hotel.image} alt={hotel.name} />
@@ -222,7 +222,7 @@ const Home = () => {
                         { city: "TP.HCM", img: "photo-1566073771259-6a8506099945" }
                     ].map((d) => (
                         <Grid size={{ xs: 12, sm: 6, md: 4 }} key={d.city}>
-                            <Card sx={{ borderRadius: 2, overflow: 'hidden' }}>
+                            <Card sx={{ borderRadius: 2, overflow: 'hidden', cursor: 'pointer', transition: 'transform .2s ease, box-shadow .2s ease', '&:hover': { transform: 'translateY(-2px)', boxShadow: 6 } }} component={Link} to={`/destination/${encodeURIComponent(d.city)}`}>
                                 <CardMedia component="img" height="160" image={`https://images.unsplash.com/${d.img}?w=600&h=400&fit=crop`} alt={d.city} />
                                 <CardContent>
                                     <Typography variant="h6">{d.city}</Typography>

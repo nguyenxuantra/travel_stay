@@ -255,6 +255,288 @@ export const hotels: Hotel[] = [
       { id: 2, name: "Villa 2 phòng ngủ", price: 15000000, capacity: 4, description: "Villa rộng rãi" },
       { id: 3, name: "Beachfront Villa", price: 22000000, capacity: 4, description: "Villa sát biển" }
     ]
+  },
+  // Thêm khách sạn cho TP.HCM
+  {
+    id: 11,
+    name: "Renaissance Riverside Hotel Saigon",
+    location: "Quận 1, TP.HCM",
+    rating: 4.5,
+    price: 1800000,
+    image: img("photo-1566073771259-6a8506099945", 400, 300),
+    images: [
+      img("photo-1566073771259-6a8506099945"),
+      img("photo-1571896349842-33c89424de2d"),
+      img("photo-1520250497591-112f2f40a3f4"),
+      img("photo-1551882547-ff40c63fe5fa")
+    ],
+    amenities: ["wifi", "pool", "restaurant"],
+    discount: "25%",
+    reviews: 456,
+    description: "Khách sạn 4 sao view sông Sài Gòn",
+    roomTypes: [
+      { id: 1, name: "Deluxe River", price: 1800000, capacity: 2, description: "View sông, 35m²" },
+      { id: 2, name: "Executive Suite", price: 2800000, capacity: 2, description: "Suite cao cấp, 50m²" },
+      { id: 3, name: "Presidential Suite", price: 5500000, capacity: 4, description: "Suite tổng thống, 120m²" }
+    ]
+  },
+  {
+    id: 12,
+    name: "Caravelle Saigon",
+    location: "Quận 1, TP.HCM",
+    rating: 4.6,
+    price: 2200000,
+    image: img("photo-1542314831-068cd1dbfeeb", 400, 300),
+    images: [
+      img("photo-1542314831-068cd1dbfeeb"),
+      img("photo-1582719478250-c89cae4dc85b"),
+      img("photo-1571003123894-1f0594d2b5d9"),
+      img("photo-1566073771259-6a8506099945")
+    ],
+    amenities: ["wifi", "restaurant", "gym"],
+    discount: "15%",
+    reviews: 389,
+    description: "Khách sạn lịch sử tại trung tâm",
+    roomTypes: [
+      { id: 1, name: "Classic Room", price: 2200000, capacity: 2, description: "Phòng cổ điển, 30m²" },
+      { id: 2, name: "Deluxe City", price: 2800000, capacity: 2, description: "View thành phố, 35m²" },
+      { id: 3, name: "Heritage Suite", price: 4500000, capacity: 3, description: "Suite lịch sử, 70m²" }
+    ]
+  },
+  // Thêm khách sạn cho Đà Nẵng
+  {
+    id: 13,
+    name: "Novotel Danang Premier Han River",
+    location: "Đà Nẵng",
+    rating: 4.4,
+    price: 2800000,
+    image: img("photo-1520250497591-112f2f40a3f4", 400, 300),
+    images: [
+      img("photo-1520250497591-112f2f40a3f4"),
+      img("photo-1571896349842-33c89424de2d"),
+      img("photo-1551882547-ff40c63fe5fa"),
+      img("photo-1542314831-068cd1dbfeeb")
+    ],
+    amenities: ["wifi", "pool", "restaurant"],
+    discount: "20%",
+    reviews: 234,
+    description: "Khách sạn 4 sao view sông Hàn",
+    roomTypes: [
+      { id: 1, name: "Deluxe River", price: 2800000, capacity: 2, description: "View sông, 32m²" },
+      { id: 2, name: "Premium City", price: 3500000, capacity: 2, description: "View thành phố, 38m²" },
+      { id: 3, name: "Executive Suite", price: 5800000, capacity: 3, description: "Suite cao cấp, 65m²" }
+    ]
+  },
+  {
+    id: 14,
+    name: "Hyatt Regency Danang",
+    location: "Đà Nẵng",
+    rating: 4.6,
+    price: 3800000,
+    image: img("photo-1582719478250-c89cae4dc85b", 400, 300),
+    images: [
+      img("photo-1582719478250-c89cae4dc85b"),
+      img("photo-1571896349842-33c89424de2d"),
+      img("photo-1520250497591-112f2f40a3f4"),
+      img("photo-1551882547-ff40c63fe5fa")
+    ],
+    amenities: ["wifi", "pool", "spa", "restaurant"],
+    discount: "10%",
+    reviews: 567,
+    description: "Resort biển 5 sao tại Đà Nẵng",
+    roomTypes: [
+      { id: 1, name: "Ocean View", price: 3800000, capacity: 2, description: "View biển, 40m²" },
+      { id: 2, name: "Garden Villa", price: 4800000, capacity: 2, description: "Villa vườn, 55m²" },
+      { id: 3, name: "Beachfront Suite", price: 7500000, capacity: 4, description: "Suite sát biển, 90m²" }
+    ]
+  },
+  // Thêm khách sạn cho Nha Trang
+  {
+    id: 15,
+    name: "Vinpearl Resort Nha Trang",
+    location: "Nha Trang, Khánh Hòa",
+    rating: 4.3,
+    price: 2500000,
+    image: img("photo-1571896349842-33c89424de2d", 400, 300),
+    images: [
+      img("photo-1571896349842-33c89424de2d"),
+      img("photo-1571003123894-1f0594d2b5d9"),
+      img("photo-1520250497591-112f2f40a3f4"),
+      img("photo-1551882547-ff40c63fe5fa")
+    ],
+    amenities: ["wifi", "pool", "restaurant"],
+    discount: "30%",
+    reviews: 1234,
+    description: "Resort biển với nhiều tiện ích",
+    roomTypes: [
+      { id: 1, name: "Garden Room", price: 2500000, capacity: 2, description: "View vườn, 35m²" },
+      { id: 2, name: "Ocean Deluxe", price: 3200000, capacity: 2, description: "View biển, 40m²" },
+      { id: 3, name: "Family Suite", price: 4800000, capacity: 4, description: "Suite gia đình, 75m²" }
+    ]
+  },
+  {
+    id: 16,
+    name: "Amiana Resort Nha Trang",
+    location: "Nha Trang, Khánh Hòa",
+    rating: 4.5,
+    price: 3200000,
+    image: img("photo-1571003123894-1f0594d2b5d9", 400, 300),
+    images: [
+      img("photo-1571003123894-1f0594d2b5d9"),
+      img("photo-1571896349842-33c89424de2d"),
+      img("photo-1520250497591-112f2f40a3f4"),
+      img("photo-1551882547-ff40c63fe5fa")
+    ],
+    amenities: ["wifi", "pool", "spa", "restaurant"],
+    discount: "20%",
+    reviews: 456,
+    description: "Resort biển yên tĩnh, view đẹp",
+    roomTypes: [
+      { id: 1, name: "Beachfront Villa", price: 3200000, capacity: 2, description: "Sát biển, 45m²" },
+      { id: 2, name: "Garden Villa", price: 3800000, capacity: 2, description: "Villa vườn, 50m²" },
+      { id: 3, name: "Ocean Suite", price: 5800000, capacity: 3, description: "Suite biển, 80m²" }
+    ]
+  },
+  // Thêm khách sạn cho Phú Quốc
+  {
+    id: 17,
+    name: "Salinda Resort Phu Quoc",
+    location: "Phú Quốc",
+    rating: 4.4,
+    price: 2800000,
+    image: img("photo-1582719478250-c89cae4dc85b", 400, 300),
+    images: [
+      img("photo-1582719478250-c89cae4dc85b"),
+      img("photo-1571003123894-1f0594d2b5d9"),
+      img("photo-1571896349842-33c89424de2d"),
+      img("photo-1520250497591-112f2f40a3f4")
+    ],
+    amenities: ["wifi", "pool", "restaurant"],
+    discount: "25%",
+    reviews: 345,
+    description: "Resort biển với không gian xanh",
+    roomTypes: [
+      { id: 1, name: "Garden Bungalow", price: 2800000, capacity: 2, description: "Bungalow vườn, 40m²" },
+      { id: 2, name: "Beachfront Villa", price: 3800000, capacity: 2, description: "Villa sát biển, 55m²" },
+      { id: 3, name: "Ocean Suite", price: 5200000, capacity: 3, description: "Suite biển, 70m²" }
+    ]
+  },
+  {
+    id: 18,
+    name: "Mango Bay Resort Phu Quoc",
+    location: "Phú Quốc",
+    rating: 4.2,
+    price: 2200000,
+    image: img("photo-1551882547-ff40c63fe5fa", 400, 300),
+    images: [
+      img("photo-1551882547-ff40c63fe5fa"),
+      img("photo-1571003123894-1f0594d2b5d9"),
+      img("photo-1582719478250-c89cae4dc85b"),
+      img("photo-1571896349842-33c89424de2d")
+    ],
+    amenities: ["wifi", "restaurant"],
+    discount: "35%",
+    reviews: 234,
+    description: "Resort sinh thái, gần gũi thiên nhiên",
+    roomTypes: [
+      { id: 1, name: "Eco Bungalow", price: 2200000, capacity: 2, description: "Bungalow sinh thái, 30m²" },
+      { id: 2, name: "Garden Villa", price: 2800000, capacity: 2, description: "Villa vườn, 40m²" },
+      { id: 3, name: "Beach House", price: 4200000, capacity: 4, description: "Nhà biển, 60m²" }
+    ]
+  },
+  // Thêm khách sạn cho Hội An
+  {
+    id: 19,
+    name: "Anantara Hoi An Resort",
+    location: "Hội An, Quảng Nam",
+    rating: 4.7,
+    price: 4200000,
+    image: img("photo-1542314831-068cd1dbfeeb", 400, 300),
+    images: [
+      img("photo-1542314831-068cd1dbfeeb"),
+      img("photo-1551882547-ff40c63fe5fa"),
+      img("photo-1571896349842-33c89424de2d"),
+      img("photo-1520250497591-112f2f40a3f4")
+    ],
+    amenities: ["wifi", "pool", "spa", "restaurant"],
+    discount: "15%",
+    reviews: 678,
+    description: "Resort 5 sao tại phố cổ Hội An",
+    roomTypes: [
+      { id: 1, name: "Garden Villa", price: 4200000, capacity: 2, description: "Villa vườn, 50m²" },
+      { id: 2, name: "River Suite", price: 5800000, capacity: 2, description: "Suite sông, 65m²" },
+      { id: 3, name: "Heritage Villa", price: 7800000, capacity: 4, description: "Villa di sản, 100m²" }
+    ]
+  },
+  {
+    id: 20,
+    name: "Palm Garden Beach Resort Hoi An",
+    location: "Hội An, Quảng Nam",
+    rating: 4.3,
+    price: 2800000,
+    image: img("photo-1571896349842-33c89424de2d", 400, 300),
+    images: [
+      img("photo-1571896349842-33c89424de2d"),
+      img("photo-1542314831-068cd1dbfeeb"),
+      img("photo-1551882547-ff40c63fe5fa"),
+      img("photo-1582719478250-c89cae4dc85b")
+    ],
+    amenities: ["wifi", "pool", "restaurant"],
+    discount: "20%",
+    reviews: 456,
+    description: "Resort biển tại Hội An",
+    roomTypes: [
+      { id: 1, name: "Beachfront Room", price: 2800000, capacity: 2, description: "Sát biển, 35m²" },
+      { id: 2, name: "Garden Deluxe", price: 3500000, capacity: 2, description: "Deluxe vườn, 42m²" },
+      { id: 3, name: "Family Villa", price: 5200000, capacity: 4, description: "Villa gia đình, 80m²" }
+    ]
+  },
+  // Thêm khách sạn cho Hà Nội
+  {
+    id: 21,
+    name: "Sofitel Legend Metropole Hanoi",
+    location: "Hà Nội",
+    rating: 4.8,
+    price: 4500000,
+    image: img("photo-1551882547-ff40c63fe5fa", 400, 300),
+    images: [
+      img("photo-1551882547-ff40c63fe5fa"),
+      img("photo-1542314831-068cd1dbfeeb"),
+      img("photo-1571896349842-33c89424de2d"),
+      img("photo-1520250497591-112f2f40a3f4")
+    ],
+    amenities: ["wifi", "pool", "spa", "restaurant", "gym"],
+    discount: "10%",
+    reviews: 789,
+    description: "Khách sạn 5 sao lịch sử tại Hà Nội",
+    roomTypes: [
+      { id: 1, name: "Historic Room", price: 4500000, capacity: 2, description: "Phòng lịch sử, 40m²" },
+      { id: 2, name: "Metropole Suite", price: 6800000, capacity: 2, description: "Suite Metropole, 60m²" },
+      { id: 3, name: "Presidential Suite", price: 12000000, capacity: 4, description: "Suite tổng thống, 150m²" }
+    ]
+  },
+  {
+    id: 22,
+    name: "Hilton Hanoi Opera",
+    location: "Hà Nội",
+    rating: 4.5,
+    price: 3200000,
+    image: img("photo-1542314831-068cd1dbfeeb", 400, 300),
+    images: [
+      img("photo-1542314831-068cd1dbfeeb"),
+      img("photo-1551882547-ff40c63fe5fa"),
+      img("photo-1571896349842-33c89424de2d"),
+      img("photo-1582719478250-c89cae4dc85b")
+    ],
+    amenities: ["wifi", "pool", "restaurant", "gym"],
+    discount: "20%",
+    reviews: 567,
+    description: "Khách sạn 5 sao tại trung tâm Hà Nội",
+    roomTypes: [
+      { id: 1, name: "Deluxe Opera", price: 3200000, capacity: 2, description: "View nhà hát, 38m²" },
+      { id: 2, name: "Executive Room", price: 4200000, capacity: 2, description: "Phòng Executive, 45m²" },
+      { id: 3, name: "Opera Suite", price: 6800000, capacity: 3, description: "Suite Opera, 85m²" }
+    ]
   }
 ];
 
